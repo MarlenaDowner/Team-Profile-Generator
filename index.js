@@ -9,6 +9,7 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./src/page-template.js");
+const { create } = require("domain");
 
 
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
@@ -17,6 +18,32 @@ const idList = []
 const teamMembers = []
 
 const appMenu = () => {
+    function createTeam () {
+        inquirer.prompt ([
+            {
+                type: "input",
+                name: "memberChoice",
+                message: `What team member would you like to add?`,
+                choices: [
+                    "Engineer",
+                    "Intern",
+                    "No more choices needed"
+                ]
+            }
+        ]).then(inputChoice => {
+            if(inputChoice.memberChoice === "Engineer") {
+                //Engineer
+            } else if (inputChoice.memberChoice === "Intern") {
+                //Intern
+            } else {
+                //Team function
+            }
+        })
+    }
+
+
+
+
     function createManager () {
         console.log("Build your team");
         inquirer.prompt ([
@@ -70,6 +97,7 @@ const appMenu = () => {
             const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
             teamMembers.push(manager);
             idList.push(answers.managerId);
+            createReadStream();
         })
     }
 
