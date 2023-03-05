@@ -72,10 +72,10 @@ const appMenu = () => {
             }
                 
         ]).then(answers => {
-            const intern = new Intern(answers.internName, answers.internId, answer.internEmail, answers.internSchool);
+            const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
             teamMembers.push(intern);
             idList.push(answers.internId);
-            console.log(intern);
+            // console.log(intern);
             createTeam();
         })
         
@@ -132,7 +132,7 @@ const appMenu = () => {
             const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
             teamMembers.push(engineer);
             idList.push(answers.engineerId);
-            console.log(engineer);
+            // console.log(engineer);
             createTeam();
         })
 
