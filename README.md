@@ -1,6 +1,6 @@
 # Test-Driven Development: Team Profile Generator
 
-The motivation of this project was to create a Node.js command-line application using JavaScript. The application will take in information about employees on a software engineering team which will then generate a rendered HTML webpage that displays a summary for each person. The application also has test script to make sure each section of code passes a predetermined criteria. 
+The motivation of this project was to create a Node.js command-line application using JavaScript. The application will take in information about employees on a software engineering team which will then generate a rendered HTML webpage that displays a summary for each person. Each time the application is used a new HTML page  will rendered, replacing the last. The application also has test script to make sure each section of code passes a predetermined criteria. 
 
 ## Functionality
 
@@ -40,6 +40,12 @@ When a user decides to finish building their team then they exit the application
 The following image shows a mock-up of the generated HTML’s appearance and functionality:
 
 ![screenshot of generator ](./assets/Project%20screenshot.JPG)
+
+## Links
+
+https://github.com/MarlenaDowner/Team-Profile-Generator 
+
+HTML Link: This will be generated when the application is used.
 
 ## License
 MIT License
