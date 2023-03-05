@@ -25,6 +25,60 @@ const appMenu = () => {
     }
 
     function createIntern() {
+        inquirer.prompt ([
+            {
+                type: "input",
+                name: "internName",
+                message: `What is your interns's name?`,
+                validate: answer => {
+                    if(answer !== ""){
+                        return true
+                    }
+                    return "Please enter interns's name."
+                }
+            },
+            {
+                type: "input",
+                name: "internId",
+                message: `What is your interns's id?`,
+                validate: answer => {
+                    if(answer !== ""){
+                        return true
+                    }
+                    return "Please enter interns's id."
+                }
+            },
+            {
+                type: "input",
+                name: "internEmail",
+                message: `What is your intern's email?`,
+                validate: answer => {
+                    if(answer !== ""){
+                        return true
+                    }
+                    return "Please enter intern's email."
+                }
+            },
+            {
+                type: "input",
+                name: "internSchool",
+                message: `What is your intern's school?`,
+                validate: answer => {
+                    if(answer !== ""){
+                        return true
+                    }
+                    return "Please enter intern's school."
+                }
+            }
+                
+        ]).then(answers => {
+            const intern = new Intern(answers.internName, answers.internId, answer.internEmail, answers.internSchool);
+            teamMembers.push(intern);
+            idList.push(answers.internId);
+            console.log(intern);
+            createTeam();
+        })
+        
 
     }
 
@@ -85,9 +139,6 @@ const appMenu = () => {
     }
 
 
-
-
-
     function createTeam () {
         inquirer.prompt ([
             {
@@ -110,8 +161,6 @@ const appMenu = () => {
             }
         })
     }
-
-
 
 
     function createManager () {
